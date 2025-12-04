@@ -1,10 +1,14 @@
-let button = document.querySelector(".btn")
-let para = document.querySelector(".para")
+let button = document.querySelectorAll(".btn");
+let para = document.querySelector(".para");
 
+// button.forEach((btn, i) =>{
+//     btn.addEventListener("click", ()=>{
+//         para.textContent = `buttan click ${i}`
+//     })
+// })
 
-
-button.addEventListener("click", () => {
-      para.textContent = button.textContent;
-    });
-para.append(button)
-
+for(let i = 0; i<= button.length; i++){
+    button[i].addEventListener("click", ()=>{
+        para.textContent = `buttan click ${i}`
+    })
+}
